@@ -31,10 +31,13 @@ spec:
     spec:
       containers:
         - name: simple-jwt-api
-          image: 1sudan/api:latest
+          image: 1sudan/api:latest         
           securityContext:
             privileged: false
             readOnlyRootFilesystem: false
             allowPrivilegeEscalation: false
+#          env:
+#          - name: JWT_SECRET
+#            value: mysecret          
           ports:
             - containerPort: 8080
